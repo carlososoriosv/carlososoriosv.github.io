@@ -191,54 +191,47 @@
 	
 
 <div class="container.form">
-  <form name="submit-to-google-sheet">
+  <form action = "https://sheetdb.io/api/v1/0mufxyzohjoki" method="post" id="sheetdb-form"> 
    
-	 <label for="fname">Name</label>
-    <input class="tb1" type="text" id="fname" name="name" placeholder="Your name..">
+	 <label for="name">Name</label>
+    <input class="tb1" type="text" id="name" name="data[name]" placeholder="Your name..">
 
    <!-- <label for="lname">Last Name</label>
     <input class="tb1" type="text" id="lname" name="lastname" placeholder="Your last name..">
 	  -->	
 	<label for="email">Email</label>
-    <input class="tb1" type="text" id="email" name="email" placeholder="Can I get your email?">  
+    <input class="tb1" type="text" id="email" name="data[email]" placeholder="Can I get your email?">  
 	
 
     
-    <label for="subject">Subject</label>
-    <textarea id="subject" class="tb1" name="message" placeholder="What would you like to tell me?" style="height:200px"></textarea>
+  <label for="message">Subject</label>
+    <textarea id="message" class="tb1" name="data[message]" placeholder="What would you like to tell me?" style="height:200px"></textarea>
 
 	 <button type="submit" >Submit</button>
-	  <span id="msg"></span>
   </form>
 	
+	<script>
+		var form = document.getElementById('sheetdb-form');
+	form.addEventListener("submit", e => {
+		e.preventDefault();
+		fetch(form.action,{
+			method : "POST",
+			body: new FormData(document.getElementById("sheetdb-form")),
+		}).then(
+		response => response.json()
+		).then((html) => {
+			window.open('index.html', '_blank');
+		});
+	});
 	
-<script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbyF182XBkR5C1RoIzKJL0Fj75RAVzXm0cnwjEWEdKNEDfY9wFnQelmNc_eXRgALhflc/exec'
-  const form = document.forms['submit-to-google-sheet']
-   const msg = document.getElementById('msg')
+	
+	
+	
+	
+	
+	</script>
+	
 
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => {
-		msg.innerHTML = "Thank you for your message!!"
-		setTimeout(function {
-				   msg.innerHTML = ""
-				   
-				   
-				   
-				   
-				   }, 5000)
-		form.reset()
-		
-		
-		
-		
-	}
-	)
-      .catch(error => console.error('Error!', error.message))
-  })
-</script>
 	
 		</div>
 </div>
