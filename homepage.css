@@ -179,6 +179,12 @@ width: 100%;
 	font-size: 90px;
 }
 
+.container3 #newtyped p{
+	color:red;
+}
+
+
+
 .header-text p{
 margin-top: 20px;
 margin-bottom: 20px;
@@ -913,4 +919,8 @@ font-family: 'DM Sans', sans-serif;
 .tb1{
 	color: #ff312e;
 	font-family: 'DM Sans', sans-serif;
+}
+
+#newtyped {
+    font-family: 'DM Sans', sans-serif;
 }

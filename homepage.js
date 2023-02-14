@@ -8,6 +8,15 @@ $(function() {
 	});
 });
 
+$(function() {
+  new Typed('#newtyped', {
+		strings: ["my skills in action..."],
+		typeSpeed: 100,
+    backDelay: 1500,
+    loop: true,
+    callback: function(){}
+	});
+});
 
 
 
