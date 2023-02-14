@@ -379,12 +379,17 @@ button:hover::after {
 	font-family: 'DM Sans', sans-serif;
 	
 		color: black;
+	padding: 10px;
 
 }
 
 
 .cards__description p{
 color: black;
+	line-height: 1.5;
+		font-family: 'DM Sans', sans-serif;
+	padding-top: 10px;
+
 }
 
 .wave1{
