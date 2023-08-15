@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Show Content Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    #content {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Show Content Example</h1>
+
+  <p id="content"></p>
+
+  <script>
+    // Define the message to be displayed
+    var message = "This content will dissapear after refreshing the page and will appear back after set time (1 minute)"; // Change the message here
+
+    // Check if the message was shown recently
+    var lastShownTime = localStorage.getItem('lastShownTime');
+    var currentTime = Date.now();
+    var timeDifference = currentTime - lastShownTime;
+
+    if (!lastShownTime || timeDifference >= (1 * 60 * 1000)) { // 1 min
+      // Show the message
+      showSpecificMessage(message);
+
+      // Store the current time in localStorage
+      localStorage.setItem('lastShownTime', currentTime);
+    }
+
+    // Set the timer to hide the message after 1 minute
+    setTimeout(hideMessage, (1 * 60 * 1000)); // 1 minute
+
+    // Function to show a specific message
+    function showSpecificMessage(message) {
+     
+      $('#content').text(message).show();
+    }
+
+    // Function to hide the message
+    function hideMessage() {
+      $('#content').hide();
+    }
+  </script>
+</body>
+</html>

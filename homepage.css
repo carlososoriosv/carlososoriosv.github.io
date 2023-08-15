@@ -126,6 +126,7 @@ nav{
 
 .logo{
 	width: 140px;
+	padding-top: 60px;
 }
 
 nav ul li{
@@ -363,9 +364,24 @@ button:hover::after {
     background-color: #fff;
     box-shadow: 0 3px 20px rgba(0, 0, 0, 0.05);
 	border: none;
-	text-align: left
+	text-align: left;
+
+
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
     
 }
+
+
+.cards__card:hover {
+    transform: scale(1.05); /* Increase the scale value for a larger hover effect */
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+
+}
+
+
+
     .cards__card img {
         object-fit: cover;
 		border-top-left-radius: 10px;
@@ -577,9 +593,6 @@ input[type=submit]:hover {
   margin-bottom: 0.25rem;
 }
 
-.rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
-  
-}
 
 .rounded-social-buttons .fa-twitter, .fa-facebook-f, .fa-linkedin, .fa-youtube, .fa-instagram {
   font-size: 25px;
@@ -638,7 +651,8 @@ input[type=submit]:hover {
 }
 
 .big_container1{
-	background-color: #000103
+	background-color: #000103;
+	color: #FEDE00
 }
 .big_container2{
 	background-color: #000103
@@ -653,10 +667,6 @@ input[type=submit]:hover {
 .list-item {
   line-height: 4;
   color: #aaa;
-}
-
-.contact-list{
-	
 }
 
 .contact-list li{
