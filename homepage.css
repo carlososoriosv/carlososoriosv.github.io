@@ -104,12 +104,60 @@ body{
 	color: #EAEAEA;
 }
 
+
+
+
+
 #header{
 	width: 100%;
 	height: 100vh;
 	background-size: cover;
 	background-position: center;
 }
+
+
+/* 
+ header {
+	position: fixed;
+    top: 10px;
+    left: 0;
+    margin-left: 140px;
+    width: 80%;
+    background-color: darkcyan;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+	border-radius: 20px;
+}
+*/
+
+header {
+	position: fixed;
+	top: 10px;
+
+	width: 80%;
+	background-color: rgba(0, 0, 0, 0.5); /* Darker background color */
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 10px;
+	border-radius: 20px;
+	border: 2px solid rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px); /* Adjust the blur value for darkness */
+	color: rgba(109, 109, 109, 0.8); /* Adjust text color and transparency */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+	z-index: 1000; /* Ensure the navigation bar stays on top */
+}
+
+  
+
+
+  header.sticky {
+	position: fixed;
+	top: 0;
+	background-color: rgba(51, 51, 51, 0.9); /* Change opacity or color as needed */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow effect */
+  }
+
 
 .container{
 	padding: 10px 10%;
@@ -121,12 +169,13 @@ nav{
 	justify-content: space-between;
 	flex-wrap: wrap;
 	font-family: 'DM Sans', sans-serif;
+	padding-top: 20px;
 
 }
 
 .logo{
 	width: 140px;
-	padding-top: 60px;
+	padding-top: 0px;
 }
 
 nav ul li{
@@ -162,7 +211,7 @@ width: 100%;
 }
 
 .header-text{
-	margin-top: 10%;
+	margin-top: 20%;
 	font-size: 30px;
 
 }
@@ -705,6 +754,11 @@ input[type=submit]:hover {
 	margin-bottom: -10px;
 }
 
+.contactme{
+
+	padding-bottom: 40px;
+}
+
 
 @media screen and (max-width: 600px){
 	
@@ -743,8 +797,14 @@ color: #333138
 
 @media screen and (min-width: 375px) and (max-width: 667px){
 	
+.header-text{
+	margin-top: 60%;
+}
+
+
 .header-text h1{
 		font-size: 50px;
+	
 	}
 	
 .header-text h1 span{
@@ -935,11 +995,26 @@ font-family: 'DM Sans', sans-serif;
     font-family: 'DM Sans', sans-serif;
 }
 
+@media screen and (min-width: 2300px) and (max-width: 2800px){
 
 
 
+	.container3{
+		margin-top: -1px;
+		padding-bottom: 500px;
+	}
 
+	.wave2 img{
+		margin-top: -110px;
+	
+	}
 
+	.wave3 img{
+		margin-top: -240px;
+	}
 
+	.contact_information{
+		justify-content: center;
+	}
 
-
+}
