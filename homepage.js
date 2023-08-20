@@ -1,6 +1,6 @@
 $(function() {
   new Typed('#typed', {
-		strings: ["FRONT-END DEVELOPER","BACK-END DEVELOPER","UX/UI DESIGNER","PROGRAMMER", "DIGITAL CREATOR",],
+		strings: ["FRONT-END DEVELOPER","BACK-END DEVELOPER","UX/UI DEVELOPER","PROGRAMMER", "SOFTWARE DEVELOPER","DATA ANALYST"],
 		typeSpeed: 100,
     backDelay: 1500,
     loop: true,
